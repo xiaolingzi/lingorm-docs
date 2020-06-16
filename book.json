@@ -1,0 +1,73 @@
+{
+  "title": "lingorm - orm framework",
+  "plugins": [
+    "lb2br",
+    "plantuml-cloud",
+    "-sharing",
+    "hide-published-with",
+    "footnote-string-to-number",
+    "anchors",
+    "image-captions",
+    "ad",
+    "chapter-fold",
+    "search-plus",
+    "google-adsense",
+    "github",
+    "github-buttons",
+    "tbfed-pagefooter",
+    "icp"
+  ],
+  "pluginsConfig": {
+    "plantuml-cloud": {
+      "protocol": "http",
+      "host": "plantuml",
+      "port": 1608,
+      "blockRegex": "^```p?uml((.*[\r\n])+?)?```$"
+    },
+    "image-captions": {
+      "caption": "Fig. _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
+    },
+    "google-adsense": {
+      "ads": [
+        {
+          "slot": "9902936962",
+          "client": "ca-pub-6914140396303354",
+          "location": ".page-inner section",
+          "format": "auto"
+        }
+      ]
+    },
+    "github": {
+      "url": "https://github.com/xiaolingzi/lingorm"
+    },
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "xiaolingzi",
+          "repo": "lingorm",
+          "type": "star",
+          "size": "small"
+        },
+        {
+          "user": "xiaolingzi",
+          "type": "follow",
+          "size": "small",
+          "width": "150",
+          "count": false
+        }
+      ]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &#169; xiaolingzi",
+      "modify_label": "Last modified：",
+      "modify_format": "2020-05-12 14:54:32"
+    },
+    "icp": {
+      "number": "粤ICP备20038410号"
+    }
+  },
+  "pdf": {
+    "paperSize": "a4"
+  },
+  "language": "en"
+}
