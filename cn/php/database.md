@@ -6,6 +6,7 @@
 {
     "testdb1":{
         "host":"192.168.0.22",
+        "port":"3306",
         "user":"db_user",
         "password":"password",
         "database":"dbname1",
@@ -14,6 +15,7 @@
     },
     "testdb2":{
         "host":"192.168.0.22",
+        "port":"3306",
         "user":"db_user",
         "password":"password",
         "database":"dbname2",
@@ -29,22 +31,26 @@
         "servers":[
         {
             "host":"192.168.0.110",
+            "port":"3306",
             "mode":"w",
             "wweight":3
         },
         {
             "host":"192.168.0.111",
+            "port":"3306",
             "mode":"rw",
             "w_weight":1,
             "rweight":1
         },
         {
             "host":"192.168.0.112",
+            "port":"3306",
             "mode":"r",
             "rweight":3
         },
         {
             "host":"192.168.0.113",
+            "port":"3306",
             "user":"db_user",
             "password":"password",
             "database":"dbname113",
