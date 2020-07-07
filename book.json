@@ -15,7 +15,8 @@
     "github",
     "github-buttons",
     "tbfed-pagefooter",
-    "icp"
+    "icp",
+    "pageview-count"
   ],
   "pluginsConfig": {
     "plantuml-cloud": {

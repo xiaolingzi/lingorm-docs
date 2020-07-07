@@ -39,7 +39,7 @@
             "host":"192.168.0.111",
             "port":"3306",
             "mode":"rw",
-            "w_weight":1,
+            "wweight":1,
             "rweight":1
         },
         {
