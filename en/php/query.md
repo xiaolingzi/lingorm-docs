@@ -104,8 +104,8 @@ $where->or(
     $testTable->id->lt(2), $testTable->id->gt(3)
 );
 
-$queryBuilder = $db->createQueryBuilder();
-$queryBuilder->select($testTable->id->count()->alias("num"), $testTable->testName->max()->alias("testName"))
+$queryBuilder = $db->queryBuilder();
+$queryBuilder->select($testTable->id->i()->count()->alias("num"), $testTable->testName->i()->max()->alias("testName"))
     ->from($testTable)
     ->where($where)
     // ->where($testTable->id->gt(3))

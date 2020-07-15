@@ -60,9 +60,9 @@ $result = $db->table($testTable)->select($testTable->id, $testTable->testName)
 除了Find方法之外，还有以下几个方法：
 
 ```php
-first($classObject = null); // 返回符合条件的第一条数据
-find($classObject = null); // 返回符合条件的数据列表
-findPage($pageIndex, $pageSize, $classObject = null); //返回分页数据
+first(); // 返回符合条件的第一条数据
+find(); // 返回符合条件的数据列表
+findPage($pageIndex, $pageSize); //返回分页数据
 findCount(); // 返回数量
 ```
 
@@ -103,8 +103,8 @@ $where->or(
     $testTable->id->lt(2), $testTable->id->gt(3)
 );
 
-$queryBuilder = $db->createQueryBuilder();
-$queryBuilder->select($testTable->id->count()->alias("num"), $testTable->testName->max()->alias("testName"))
+$queryBuilder = $db->queryBuilder();
+$queryBuilder->select($testTable->id->i()->count()->alias("num"), $testTable->testName->i()->max()->alias("testName"))
     ->from($testTable)
     ->where($where)
     // ->where($testTable->id->gt(3))

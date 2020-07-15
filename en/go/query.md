@@ -100,7 +100,7 @@ db := lingorm.DB("testdb1")
 companyTable := company.CompanyEntity{}.Table()
 departmentTable := company.DepartmentEntity{}.Table()
 builder := db.QueryBuilder()
-builder.Select(departmentTable.CompanyID, departmentTable.ID.Count().Alias("Num"), companyTable.CompanyName.Max().Alias("companyName")).
+builder.Select(departmentTable.CompanyID, departmentTable.ID.I().Count().Alias("Num"), companyTable.CompanyName.I().Max().Alias("companyName")).
     From(departmentTable).
     LeftJoin(companyTable, departmentTable.CompanyID.EQ(companyTable.ID)).
     Where(departmentTable.IsDeleted.EQ(0)).

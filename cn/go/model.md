@@ -12,14 +12,14 @@ import (
 
 //CompanyEntity entity
 type CompanyEntity struct {
-    CompanyName         string    `json:"companyName" comlumn:"company_name"`
-    CreatedAt           time.Time `json:"createdAt" comlumn:"created_at"`
-    DeletedAt           time.Time `json:"deletedAt" comlumn:"deleted_at"`
-    ID                  int       `json:"id" comlumn:"id" primary_key:"true" auto_increment:"true"`
-    IsDeleted           int       `json:"isDeleted" comlumn:"is_deleted"`
-    Logo                string    `json:"logo" comlumn:"logo"`
-    ShortName           string    `json:"shortName" comlumn:"short_name"`
-    UpdatedAt           time.Time `json:"updatedAt" comlumn:"updated_at"`
+    CompanyName         string    `json:"companyName" column:"company_name"`
+    CreatedAt           time.Time `json:"createdAt" column:"created_at"`
+    DeletedAt           time.Time `json:"deletedAt" column:"deleted_at"`
+    ID                  int       `json:"id" column:"id" primary_key:"true" auto_increment:"true"`
+    IsDeleted           int       `json:"isDeleted" column:"is_deleted"`
+    Logo                string    `json:"logo" column:"logo"`
+    ShortName           string    `json:"shortName" column:"short_name"`
+    UpdatedAt           time.Time `json:"updatedAt" column:"updated_at"`
 }
 
 //CompanyTable table

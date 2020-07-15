@@ -61,9 +61,9 @@ _, err := db.Table(table).Select(table.ID, table.CompanyName).Where(table.IsDele
 除了Find方法之外，还有以下几个方法：
 
 ``` go
-Find(slicePtr ...interface{}) (interface{}, error) // 返回符合条件的第一条数据
-FindPage(pageIndex int, pageSize int, slicePtr ...interface{}) (common.PageResult, error) // 返回符合条件的数据列表
-First(structPtr ...interface{}) (interface{}, error) //返回分页数据
+First(structPtr ...interface{}) (interface{}, error)  // 返回符合条件的第一条数据
+Find(slicePtr ...interface{}) (interface{}, error) // 返回符合条件的数据列表
+FindPage(pageIndex int, pageSize int, slicePtr ...interface{}) (common.PageResult, error) //返回分页数据
 FindCount() (int, error) // 返回数量
 ```
 
@@ -98,7 +98,7 @@ db := lingorm.DB("testdb1")
 companyTable := company.CompanyEntity{}.Table()
 departmentTable := company.DepartmentEntity{}.Table()
 builder := db.QueryBuilder()
-builder.Select(departmentTable.CompanyID, departmentTable.ID.Count().Alias("Num"), companyTable.CompanyName.Max().Alias("companyName")).
+builder.Select(departmentTable.CompanyID, departmentTable.ID.I().Count().Alias("Num"), companyTable.CompanyName.I().Max().Alias("companyName")).
     From(departmentTable).
     LeftJoin(companyTable, departmentTable.CompanyID.EQ(companyTable.ID)).
     Where(departmentTable.IsDeleted.EQ(0)).

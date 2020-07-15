@@ -8,13 +8,13 @@ $sql = "select * from test.test where id=:id";
 $paramArr = array("id" => 1);
 $pageSize = 10;
 $pageIndex = 1;
-$result = $db->createNative()->findPage($sql, $paramArr, $pageIndex, $pageSizes);
+$result = $db->nativeQuery()->findPage($sql, $paramArr, $pageIndex, $pageSizes);
 ```
 
 如果需要将结果映射到结构体，就如下：
 
 ```php
-$result = $db->createNative()->findPage($sql, $paramArr, $pageIndex, $pageSize, new TestEntity());
+$result = $db->nativeQuery()->findPage($sql, $paramArr, $pageIndex, $pageSize, new TestEntity());
 ```
 
 *需要注意的是，这里的参数化查询采用的命名参数的方式而不是问号。

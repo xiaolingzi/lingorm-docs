@@ -8,13 +8,13 @@ $sql = "select * from test.test where id=:id";
 $paramArr = array("id" => 1);
 $pageSize = 10;
 $pageIndex = 1;
-$result = $db->createNative()->findPage($sql, $paramArr, $pageIndex, $pageSizes);
+$result = $db->nativeQuery()->findPage($sql, $paramArr, $pageIndex, $pageSizes);
 ```
 
 If you want to map the results to a structure object, you can do it like this:
 
 ```php
-$result = $db->createNative()->findPage($sql, $paramArr, $pageIndex, $pageSize, new TestEntity());
+$result = $db->nativeQuery()->findPage($sql, $paramArr, $pageIndex, $pageSize, new TestEntity());
 ```
 
 All available methods are as follows:

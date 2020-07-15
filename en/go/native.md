@@ -20,7 +20,7 @@ _, err := native.Find(sql, params, &result)
 All supported methods are as follows:
 
 ```go
-Execute(sql string, params map[string]interface{}) (int, int, error) // execute the insert, update and delete sql， return the affected rows, the last inserted id and error.
+Execute(sql string, params map[string]interface{}) (int, int, error) // execute the insert, update and delete sql， return the number of affected rows, the last inserted id and error.
 Find(sql string, params map[string]interface{}, slicePtr ...interface{}) (interface{}, error) // return all rows
 FindPage(pageIndex int, pageSize int, sql string, params map[string]interface{}, slicePtr ...interface{}) (common.PageResult, error) // return page result
 FindCount(sql string, params map[string]interface{}) (int, error) // return the number of rows
