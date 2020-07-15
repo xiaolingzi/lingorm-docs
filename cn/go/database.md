@@ -73,4 +73,4 @@
 
 3. 配置文件路径
 数据库配置文件可以放在程序有可读权限的任何位置，然后通过环境变量LINGORM_CONFIG来设置其所在路径即可，例如：
-`os.environ['LINGORM_CONFIG'] ='/your/path/database.json'`
+`os.Setenv("LINGORM_CONFIG", "/your/path/database.json")`

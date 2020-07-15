@@ -73,4 +73,4 @@ The configuration of the cluster, like 'testdb3', and use the 'servers' property
 
 3. Config the json file's path
 The database config file can be placed anywhere the program has readable permissions, and then set the path it is in by the environment variable 'LINGORM_CONFIG', for example:
-`os.Setenv("LINGORM_CONFIG", "/your/path/database.json")`
+`os.environ['LINGORM_CONFIG'] ='/your/path/database.json'`
